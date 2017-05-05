@@ -1,7 +1,7 @@
 package shopping_basket;
 
-public enum Category{
+public enum Category {
   FOOD,
   TOILETRIES,
-  HOUSEHOLD;
+  HOUSEHOLD
 }

@@ -23,8 +23,4 @@ public class Item {
     return this.category;
   }
 
-  public static void main(String[] args){
-    Item bread = new Item("bread rolls", 2.00, Category.TOILETRIES);
-  }
-
 }

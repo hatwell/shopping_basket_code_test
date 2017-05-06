@@ -1,16 +1,14 @@
 package shopping_basket;
-import java.util.ArrayList;
-
 
 public class Basket {
 
-  ArrayList<Item> items;
+	private Item[] items;
 
-  public void Basket() {
-    this.items = items;
+  public Basket() {
+	 this.items = new Item[0];
   }
 
-  public ArrayList<Item> getItems() {
+  public Item[] getItems() {
     return this.items;
   }
 
@@ -23,8 +21,17 @@ public class Basket {
     return total;
   }
 
+  public int getItemCount(){
+    int itemCount = 0;
+    for (Item item : items){
+      itemCount +=1;
+    }
+    return itemCount;
+  }
+
   public void addToBasket(Item item){
-    this.items.add(item);
+    int itemCount = this.getItemCount();
+    this.items[itemCount] = item;
   }
 
 

@@ -23,7 +23,9 @@ public class Basket {
     return total;
   }
 
-  
+  public void addToBasket(Item item){
+    this.items.add(item);
+  }
 
 
 }

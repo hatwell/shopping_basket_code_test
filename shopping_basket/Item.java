@@ -4,6 +4,7 @@ public class Item {
   private String name;
   private double price;
   private Category category;
+  private Discount discount;
 
   public Item(String name, double price, Category category){
     this.name = name;

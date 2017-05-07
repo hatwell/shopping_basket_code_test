@@ -40,6 +40,20 @@ public class BasketTest {
     assertEquals(3.50, basket.getBasketTotal(), 0.01);
   }
 
+  @Test
+  public void testItemCanBeDeletedByName(){
+    basket.addToBasket(item);
+    basket.deleteItem(item);
+    assertEquals(0, basket.getItemCount());
+  }
+
+  @Test
+  public void testCountNumberOfItems(){
+    basket.addToBasket(item);
+    assertEquals(1, basket.countNumberOfItems("grapes"));
+
+  }
+
 
 
 

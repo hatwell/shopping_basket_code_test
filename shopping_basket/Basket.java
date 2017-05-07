@@ -15,7 +15,11 @@ public class Basket {
 
   //returns number of items in basket
   public int getItemCount(){
-    return items.size();
+    int numberofItems = 0;
+    for (Item item : items){
+      numberofItems +=1;
+    }
+    return numberofItems;
   }
 
   //adds an item to the basket
@@ -37,15 +41,19 @@ public class Basket {
   }
 
   //deletes item from basket
-  //I know this won't work if more than one item shares a name, but in
-  // this world i'm shopping at a supermarket with only one type of
-  //bread, beans, whatever.
-  public void deleteItemByName(String itemName){
-    for (Item item : items){
-      if (item.getName() == itemName) {
+  public void deleteItem(Item item){
         items.remove(item);
+
+  }
+
+  public int countNumberOfItems(String itemName){
+    int numberOfItems = 0;
+    for (Item item : items){
+      if (item.getName() == itemName){
+        numberOfItems +=1;
       }
     }
+    return numberOfItems;
   }
 
 }

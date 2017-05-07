@@ -1,5 +1,5 @@
 package shopping_basket;
 
 public interface Discountable {
-  public void changePrice();
+  public double changePrice();
 }

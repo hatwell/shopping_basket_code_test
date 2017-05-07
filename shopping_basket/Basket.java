@@ -58,8 +58,10 @@ public class Basket {
     return numberOfItems;
   }
 
+
+
   public double applyLoyaltyDiscount(double subTotal){
-    double total = loyalty.applyLoyaltyDiscount(subTotal);
+    double total = loyalty.changePrice(subTotal);
     return total;
   }
 }

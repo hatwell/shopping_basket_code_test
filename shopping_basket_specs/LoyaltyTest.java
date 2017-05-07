@@ -15,4 +15,9 @@ public class LoyaltyTest {
   public void testLoyalty(){
     assertNotNull(loyalty.getLoyalty());
   }
+
+  @Test
+  public void testLoyaltyDiscountReturnsTotal(){
+    assertNotNull(loyalty.changePrice(30.00));
+  }
 }

@@ -13,12 +13,24 @@ public class BasketTest {
   }
 
   @Test
-  public void testItemCount(){
+  public void testInitialItemCount(){
+    assertEquals(0, basket.getItemCount());
   }
 
   @Test
   public void testAddingItem(){
-    
+    basket.addToBasket(item);
+    assertEquals(1, basket.getItemCount());
+
   }
+
+  @Test
+  public void testEmptyBasket(){
+    basket.addToBasket(item);
+    basket.emptyBasket();
+    assertEquals(0, basket.getItemCount());
+  }
+
+
 
 }

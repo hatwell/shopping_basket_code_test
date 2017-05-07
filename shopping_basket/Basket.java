@@ -3,9 +3,12 @@ import java.util.ArrayList;
 
 public class Basket {
   private ArrayList<Item> items;
+  private Loyalty loyalty;
 
   public Basket(){
     this.items = new ArrayList<Item>();
+    loyalty = new Loyalty();
+    this.loyalty = loyalty;
   }
 
   //returns array of items
@@ -32,7 +35,7 @@ public class Basket {
     items.clear();
   }
   //totals price of items in basket
-  public double getBasketTotal(){
+  public double getBasketSubTotal(){
     double total = 0;
     for (Item item : items){
       total += item.getPrice();

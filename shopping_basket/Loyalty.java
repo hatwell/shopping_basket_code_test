@@ -1,9 +1,13 @@
 package shopping_basket;
+import java.util.Random;
 
-public class Customer{
+public class Loyalty{
+
   private Boolean loyalty;
 
-  public Customer(Boolean loyalty){
+  public Loyalty(){
+    Random random = new Random();
+    loyalty = random.nextBoolean();
     this.loyalty = loyalty;
   }
 

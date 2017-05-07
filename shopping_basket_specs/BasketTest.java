@@ -37,7 +37,7 @@ public class BasketTest {
   public void testBasketTotal(){
     basket.addToBasket(item);
     basket.addToBasket(item2);
-    assertEquals(3.50, basket.getBasketTotal(), 0.01);
+    assertEquals(3.50, basket.getBasketSubTotal(), 0.01);
   }
 
   @Test

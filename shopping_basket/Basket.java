@@ -4,16 +4,19 @@ import java.util.ArrayList;
 public class Basket {
   private ArrayList<Item> items;
   private Loyalty loyalty;
+  private double total;
 
   public Basket(){
     this.items = new ArrayList<Item>();
     this.loyalty = new Loyalty();
+    this.total = 0;
   }
 
   //returns array of items
   public ArrayList<Item> getItems(){
     return this.items;
   }
+
 
   //returns number of items in basket
   public int getItemCount(){
@@ -33,13 +36,40 @@ public class Basket {
   public void emptyBasket(){
     items.clear();
   }
+
+  //updates total
+    public void updateTotal(double newTotal){
+      this.total = newTotal;
+    }
+
+  //gets total
+  public double getTotal(){
+    return this.total;
+  }
+
   //totals price of items in basket
   public double getBasketSubTotal(){
     double total = 0;
     for (Item item : items){
       total += item.getPrice();
     }
+    this.updateTotal(total);
     return total;
+
+  }
+
+
+
+
+  //counts number of a particular item in basket
+  public int countItem(Item countedItem) {
+    int counter = 0;
+    for (Item item : items) {
+      if (countedItem.getName() == item.getName()){
+        counter +=1;
+      }
+    }
+    return counter;
   }
 
   //deletes item from basket

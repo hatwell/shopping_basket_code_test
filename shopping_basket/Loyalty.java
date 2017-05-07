@@ -14,7 +14,7 @@ public class Loyalty implements Discountable{
   public double changePrice(double subTotal){
     double total = subTotal;
     if (loyalty == true) {
-      total *= 1.02;
+      total *= 0.98;
     }
     return total;
   }

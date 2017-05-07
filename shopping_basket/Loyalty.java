@@ -14,4 +14,12 @@ public class Loyalty{
   public Boolean getLoyalty(){
     return this.loyalty;
   }
+
+  public double applyLoyaltyDiscount(double subTotal){
+    double total = subTotal;
+    if (loyalty == true) {
+      total *= 1.02;
+    }
+    return total;
+  }
 }

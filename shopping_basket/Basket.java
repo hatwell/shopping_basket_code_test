@@ -59,12 +59,7 @@ public class Basket {
   }
 
   public double applyLoyaltyDiscount(double subTotal){
-    double total = subTotal;
-    if (loyalty.getLoyalty() == true){
-      total *= 1.02;
-    }
+    double total = loyalty.applyLoyaltyDiscount(subTotal);
     return total;
-
   }
-
 }

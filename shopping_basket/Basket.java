@@ -28,5 +28,12 @@ public class Basket {
     items.clear();
   }
 
+  public double getBasketTotal(){
+    double total = 0;
+    for (Item item : items){
+      total += item.getPrice();
+    }
+  }
+
 
 }

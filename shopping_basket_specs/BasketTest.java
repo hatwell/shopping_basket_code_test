@@ -5,11 +5,13 @@ import org.junit.*;
 public class BasketTest {
   Basket basket;
   Item item;
+  Item item2;
 
   @Before
   public void before(){
     basket = new Basket();
     item = new Item("grapes", 1.50, Category.FOOD);
+    item2 = new Item("bleach", 2.00, Category.HOUSEHOLD);
   }
 
   @Test
@@ -32,6 +34,11 @@ public class BasketTest {
   }
 
   @Test
+  public void testBasketTotal(){
+    basket.addToBasket(item);
+    basket.addToBasket(item2);
+    assertEquals(3.50, basket.getBasketTotal(), 0.01);
+  }
 
 
 

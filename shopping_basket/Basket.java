@@ -33,6 +33,7 @@ public class Basket {
     for (Item item : items){
       total += item.getPrice();
     }
+    return total;
   }
 
 

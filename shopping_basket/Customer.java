@@ -1,9 +1,13 @@
 package shopping_basket;
 
 public class Customer{
-  Boolean loyalty;
+  private Boolean loyalty;
 
   public Customer(Boolean loyalty){
     this.loyalty = loyalty;
+  }
+
+  public Boolean getLoyalty(){
+    return this.loyalty;
   }
 }

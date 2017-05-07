@@ -7,8 +7,7 @@ public class Basket {
 
   public Basket(){
     this.items = new ArrayList<Item>();
-    loyalty = new Loyalty();
-    this.loyalty = loyalty;
+    this.loyalty = new Loyalty();
   }
 
   //returns array of items
@@ -57,6 +56,15 @@ public class Basket {
       }
     }
     return numberOfItems;
+  }
+
+  public double applyLoyaltyDiscount(double subTotal){
+    double total = subTotal;
+    if (loyalty.getLoyalty() == true){
+      total *= 1.02;
+    }
+    return total;
+
   }
 
 }

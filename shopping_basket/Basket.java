@@ -59,7 +59,6 @@ public class Basket {
   }
 
 
-
   public double applyLoyaltyDiscount(double subTotal){
     double total = loyalty.changePrice(subTotal);
     return total;

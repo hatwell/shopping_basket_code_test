@@ -19,7 +19,7 @@ public class BogofTest {
     basket.addToBasket(item);
     basket.addToBasket(item);
     bogof.applyBogof();
-    assertEquals(0.5, basket.getBasketSubTotal(), 0.01);
+    assertEquals(0.5, basket.getTotal(), 0.01);
 
   }
 }

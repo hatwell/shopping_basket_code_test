@@ -54,6 +54,12 @@ public class BasketTest {
 
   }
 
+  @Test
+  public void testUpdateTotal(){
+    basket.updateTotal(10.00);
+    assertEquals(10.00, basket.getTotal(), 0.01);
+  }
+
 
 
 
